@@ -18,4 +18,4 @@
 - Gearada tabela comparando o desempenho dos algoritmos.
 
 # Dependências
-sklearn,numpy,pandas e imblearn
+sklearn, numpy, pandas, imblearn, pickle, matplotlib e seaborn
