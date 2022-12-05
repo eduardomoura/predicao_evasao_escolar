@@ -1,0 +1,21 @@
+
+
+# Gerar Modelo de Machine Learning 
+- Carregar base de dados
+- Utilizado Pipeline com objetivo de realizar os passos de converter atributos categóricos em númericos com o OrdinalEncoder e definição do algoritmo utilizado para geração do modelo
+- Para a geração do modelo de forma mais justa, foi utilizado o GridSearchCV para os hiperparâmetros serem gerados de forma automática, evitando assim que coloquemos o nosso sentimento para se chegar a resultados supostamente melhores.
+
+- Foi utilizado cross_validate com validação aninhada: (Link de referência https://dataml.com.br/validacao-cruzada-aninhada-com-scikit-learn/)
+    - Divide o conjunto de dados em n grupos de tamanhos iguais (n folds).
+    - Para cada grupo, repita: (ou seja, repita n vezes)
+        - Escolha um dos n grupos para ser o conjunto de teste.
+        - Execute a validação cruzada de k-folds com os n – 1 grupos restantes, obtendo as medidas de performance nos k conjuntos de validação.
+        - Escolha o melhor modelo da validação cruzada interna e o avalie no conjunto de teste atual, armazenando seu erro/performance.
+    - Por fim temos n medidas de performance de generalização, uma para cada conjunto de teste.
+
+- Como resultados foi impresso os melhores estimadores de cada modelo.
+- Plotado gráficos de barras comparando as métricas de cada algoritmo.
+- Gearada tabela comparando o desempenho dos algoritmos.
+
+# Dependências
+sklearn,numpy,pandas e imblearn
